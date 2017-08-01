@@ -1,0 +1,60 @@
+{
+  "clientes": [
+    {
+      
+      "nombre": "myNombre",
+      "telefono": "myFono",
+      "celular":  "myCel",
+      "correo":"myCorreo",
+      "direccion":"myDireccion"
+    },
+    {
+      "nombre": "myNombre",
+      "telefono": "myFono",
+      "celular":  "myCel",
+      "correo":"myCorreo",
+      "direccion":"myDireccion"
+    },
+    {
+      "nombre": "myNombre",
+      "telefono": "myFono",
+      "celular":  "myCel",
+      "correo":"myCorreo",
+      "direccion":"myDireccion"
+    }
+  ],
+  "seguros": [
+    {
+      "id": 1,
+      "placa": "cb46136",
+      "modelo": "1985"
+    },
+    {
+      "id": 2,
+      "placa": "cb46136",
+      "modelo": "1985"
+    },
+    {
+      "id": 3,
+      "placa": "cb46136",
+      "modelo": "1985"
+    }
+  ],
+  "siniestros": [
+    {
+      "id": 1,
+      "fecha": "12/12/2016",
+      "direccion": "heroinas"
+    },
+    {
+      "id": 2,
+      "fecha": "12/12/2016",
+      "direccion": "heroinas"
+    },
+    {
+      "id": 3,
+      "fecha": "12/12/2016",
+      "direccion": "heroinas"
+    }
+  ]
+}

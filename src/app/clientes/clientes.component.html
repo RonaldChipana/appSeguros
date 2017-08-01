@@ -1,0 +1,73 @@
+<button type="button" class="btn btn-success" data-toggle="modal" data-target="#nuevoCliente">
+  Nuevo Cliente <i class="fa fa-plus" aria-hidden="true"></i> 
+</button>
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Nombre</th>
+      <th>Telefono</th>
+      <th>Celular</th>
+      <th>Correo</th>
+      <th>Dirección</th>
+      <th>Editar</th>
+      <th>Eliminar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of clientes; let i = index" >
+      <th scope="row">{{i+1}}</th>
+      <td>{{item.nombre}}</td>
+      <td>{{item.telefono}}</td>
+      <td>{{item.celular}}</td>
+      <td>{{item.correo}}</td>
+      <td>{{item.direccion}}</td>
+      <td><button type="button" class="btn btn-success"><i class="fa fa-pencil" aria-hidden="true"></i></button></td>
+      <td><button type="button" class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></button></td>
+    </tr>
+
+  </tbody>
+</table>
+
+<div class="modal fade" id="nuevoCliente" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document" >
+    <div class="modal-content" >
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Nuevo Cliente</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form novalidate >
+          <div class="form-group">
+            <label for="imputNombre">Nombre</label>
+            <input type="text" class="form-control" id="imputNombre" placeholder="Nombre Completo" [(ngModel)]="cli.nombre" name="nombre">
+          </div>
+          <div class="form-group">
+            <label for="imputTelefono">Teléfono</label>
+            <input type="Number" class="form-control" id="imputTelefono" placeholder="Teléfono Fijo" [(ngModel)]="cli.telefono" name="telefono">
+          </div>
+          <div class="form-group">
+            <label for="imputCelular">Celular</label>
+            <input type="Number" class="form-control" id="imputCelular" placeholder="Teléfono Celular" [(ngModel)]="cli.celular" name="celular">
+          </div>
+          <div class="form-group">
+            <label for="inputEmail">Correo Electronico</label>
+            <input type="email" class="form-control" id="inputEmail" placeholder="Correo Electronico" [(ngModel)]="cli.correo" name="correo">
+          </div>
+          <div class="form-group">
+            <label for="imputNombre">Dirección</label>
+            <input type="text" class="form-control" id="imputDireccion" placeholder="Dirección" [(ngModel)]="cli.direccion" name="direccion">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="submit" (click)="registrar()" class="btn btn-primary" data-dismiss="modal">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
